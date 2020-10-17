@@ -38,31 +38,6 @@ app.put('/image', (req, res) => { image.handleImage(req, res, db) })
 
 app.post('/imageurl', (req, res) => { image.handleApiCall(req, res) })
 
-// bcrypt.hash("bacon", null, null, function(err, hash) {
-//     // Store hash in your password DB.
-// });
-
-// // Load hash from your password DB.
-// bcrypt.compare("bacon", hash, function(err, res) {
-//     // res == true
-// });
-// bcrypt.compare("veggies", hash, function(err, res) {
-//     // res = false
-// });
-
 app.listen(3000, () => {
 	console.log('app is running on port 3000');
 })
-
-
-
-/*
-/ --> res = this is working
-/signin --> POST request, res success/fail
-/register --> POST request = res new user object
-/profile/:userId --> GET req = user
-/image --> PUT = update the user profile/score -> updated user object
-
-
-
-*/
